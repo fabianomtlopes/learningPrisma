@@ -8,10 +8,20 @@ async function main() {
       duration: 300,
       name: "Curso de React Native",
       description: "Curso excelente de React Native com Rodrigão",
+      teacher: {
+        connectOrCreate: {
+          where: {
+            name: "Fabiano de Matos Lopes"
+          },
+          create: {
+            name: "Fabiano de Matos Lopes"
+          }
+        }
+      }
     },
   });
 
   console.log(result);
 }
 
-main();
+main(); 
